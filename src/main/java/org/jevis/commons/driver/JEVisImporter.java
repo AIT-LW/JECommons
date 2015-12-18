@@ -74,7 +74,7 @@ public class JEVisImporter implements Importer {
                     }
                     List<JEVisSample> samples = onlineToSampleMap.get(onlineData);
                     DateTime convertedDate = TimeConverter.convertTime(_timezone, s.getDate());
-                    JEVisSample sample = onlineData.getAttribute("Value").buildSample(convertedDate, s.getValue(), "Imported by JEDataCollector");
+                    JEVisSample sample = onlineData.getAttribute("Value").buildSample(convertedDate, s.getValue(), "");
                     samples.add(sample);
                 } catch (Exception ex1) {
                     Logger.getLogger(JEVisImporter.class.getName()).log(Level.ERROR, "Error while importing samples", ex1);
